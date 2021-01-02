@@ -1,0 +1,212 @@
+head, body, div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: aquamarine;
+}
+
+.container,
+.bear-head, .ear, .inner-ear,
+.snout, .eye, .nose, .line,
+.pacifier, .pacifier-middle, .ring,
+.ribbon, .ribbon-middle {
+  position: absolute;
+}
+
+.container {
+  width: 300px;
+  max-width: 300px;
+  height: 250px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.container .bear-head {
+  width: 250px;
+  height: 230px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #916953;
+  z-index: 10;
+}
+.container .bear-head .eye {
+  width: 10px;
+  height: 10px;
+  top: 57%;
+  left: 34%;
+  border-radius: 50%;
+  background-color: #000000;
+  z-index: 20;
+}
+.container .bear-head .eye.right {
+  transform: translateX(72px);
+}
+.container .bear-head .snout {
+  width: 56px;
+  height: 54px;
+  top: 61%;
+  left: 39%;
+  border-radius: 50%;
+  background-color: #FFE4E3;
+  animation: 0.5s linear infinite alternate moveSnout;
+  z-index: 20;
+}
+.container .bear-head .snout .nose {
+  width: 30px;
+  height: 15px;
+  top: 23%;
+  left: 26%;
+  border-radius: 50%;
+  background-color: #000000;
+  z-index: 20;
+}
+.container .bear-head .snout .line {
+  width: 2px;
+  height: 10px;
+  top: 51%;
+  left: 49%;
+  transform: translateX(50%);
+  background-color: #000000;
+  z-index: 20;
+}
+.container .bear-head .snout .pacifier {
+  top: 75%;
+  left: 46%;
+  z-index: 30;
+}
+.container .bear-head .snout .pacifier .pacifier-center {
+  position: relative;
+  width: 22px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #AE8FC8;
+}
+.container .bear-head .snout .pacifier .pacifier-center.right {
+  bottom: 6px;
+  right: 0px;
+}
+.container .bear-head .snout .pacifier .pacifier-center.left {
+  bottom: 26px;
+  right: 15px;
+}
+.container .bear-head .snout .pacifier .pacifier-middle {
+  width: 15px;
+  height: 15px;
+  top: -7%;
+  left: -16%;
+  border-radius: 50%;
+  background-color: #5E2899;
+}
+.container .bear-head .snout .pacifier .ring {
+  width: 18px;
+  height: 18px;
+  top: 10%;
+  left: -34%;
+  border: 3px solid #5E2899;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.container .ear {
+  width: 80px;
+  height: 80px;
+  left: 8%;
+  border-radius: 50%;
+  background-color: #916953;
+  animation: 1s linear infinite alternate moveLeftEar;
+}
+.container .ear .inner-ear {
+  width: 60px;
+  height: 60px;
+  top: 10%;
+  right: 10%;
+  border-radius: 50%;
+  background-color: #FCB5B5;
+}
+.container .ear.right {
+  left: 65%;
+  animation: 1s linear infinite alternate moveRightEar;
+}
+.container .inner-ear.right {
+  transform: translateX(-3px);
+}
+.container .ribbon {
+  top: 16px;
+  left: 30%;
+  transform: rotate(-25deg);
+  animation: 1s linear infinite alternate moveRibbon;
+  z-index: 30;
+}
+.container .ribbon .ribbon-middle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #AE8FC8;
+}
+.container .ribbon .ribbon-ear.right {
+  width: 0;
+  height: 0;
+  position: relative;
+  left: 46%;
+  bottom: 14px;
+  border-radius: 40%;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-right: 25px solid #AE8FC8;
+}
+.container .ribbon .ribbon-ear.left {
+  width: 0;
+  height: 0;
+  position: relative;
+  bottom: 65px;
+  right: 64%;
+  border-radius: 40%;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid #AE8FC8;
+}
+
+@keyframes moveRightEar {
+  0% {
+    top: 0%;
+    left: 65%;
+  }
+  100% {
+    top: 2%;
+    left: 67%;
+  }
+}
+@keyframes moveLeftEar {
+  0% {
+    top: 0;
+    left: 8%;
+  }
+  100% {
+    top: 2%;
+    left: 6%;
+  }
+}
+@keyframes moveRibbon {
+  0% {
+    top: 16px;
+  }
+  100% {
+    top: 17px;
+    transform: rotate(-28deg) translate(-10px);
+  }
+}
+@keyframes moveSnout {
+  0% {
+    top: 61%;
+  }
+  100% {
+    top: 62%;
+  }
+}
+
+/*# sourceMappingURL=draw.css.map */
